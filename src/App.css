@@ -1,0 +1,248 @@
+.header {
+  padding: 2.5vh 1vw 2.5vh 1vw;
+  justify-content: center;
+  text-align: center;
+  align-items: center;
+  background-color: #40c488;
+  height: 8.5vh;
+  display: grid;
+  grid-template-columns: repeat(2, 1fr);
+  border: #40c488;
+  transition: background-color 0.3s ease-in-out;
+}
+
+.header.popup-open {
+  background-color: #196844;
+  /* Color de fondo cuando el popup está abierto */
+}
+
+.header.popup-open img {
+  opacity: 70%;
+}
+
+.header-logos {
+  text-align: right;
+  margin-right: 1vw;
+}
+
+.header-logos .poligamers {
+  height: 9vh;
+  grid-column: auto;
+  filter:drop-shadow(0 0 0.5rem rgb(0, 0, 0))
+}
+
+.list {
+  grid-column: auto;
+  text-align: left;
+  margin-left: 1vw;
+}
+
+button {
+  background: none;
+  border: none;
+  width: 2.083vw;
+  height: 2.778vh;
+}
+
+.listbutton {
+  z-index: 1;
+}
+
+.listbox {
+  position: relative;
+  width: 2.083vw;
+  height: 2.778vh;
+  left: 0vw;
+  background: transparent;
+  cursor: pointer;
+  display: block;
+  filter:drop-shadow(0 0 0.1rem rgb(0, 0, 0))
+}
+
+.listbox input {
+  display: none;
+}
+
+.listbox span {
+  display: block;
+  position: absolute;
+  height: 0.37vh;
+  width: 100%;
+  background: black;
+  border-radius: 0.55vh;
+  opacity: 1;
+  transform: rotate(0deg);
+  transition: .25s ease-in-out;
+}
+
+.listbox span:nth-of-type(1) {
+  transform-origin: left center;
+}
+
+.listbox span:nth-of-type(2) {
+  top: 50%;
+  transform: translateY(-50%);
+  transform-origin: left center;
+}
+
+.listbox span:nth-of-type(3) {
+  top: 100%;
+  transform-origin: left center;
+  transform: translateY(-100%);
+}
+
+#notification-popup {
+  display: none;
+  /* Ocultar la ventana emergente por defecto */
+  position: absolute;
+  top: 0.9vh;
+  left: 0;
+  width: 18.625vw;
+  height: 99vh;
+  background-color: #f1f1f1;
+  box-shadow: 0px 0.417vw 1.481vw 0px rgba(0, 0, 0, 0.2);
+  z-index: 1;
+  animation-duration: 0.2s;
+  animation-name: slidein;
+}
+
+#notification-popup.active {
+  display: block;
+  /* Mostrar la ventana emergente cuando tiene la clase 'active' */
+}
+
+.popup-content {
+  color: white;
+  border-radius: 10px;
+  padding: 10px;
+}
+
+.popup-header {
+  font-size: 2.9vh;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  border-bottom: 0.3vh solid white;
+  padding: 4vh 0vw 0.926vh 0.5vw;
+  margin-bottom: 0.9vh;
+}
+
+.popup-footer {
+  font-size: 2.9vh;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  border-bottom: 0.3vh solid white;
+  padding: 4vh 0vw 0.926vh 0.5vw;
+  margin-bottom: 0.9vh;
+}
+
+.popup-footer h3 {
+  margin: 0;
+  font-size: 0, 833vw;
+  font-weight: bold;
+}
+
+.popup-header h3 {
+  margin: 0;
+  font-size: 0, 833vw;
+  font-weight: bold;
+}
+
+.notifications-list {
+  list-style: none;
+  margin-top: 3vh;
+  padding: 0 0 5vh 0.5vw;
+}
+
+.notifications-list li {
+  font-size: 2.3vh;
+  padding: 0.5vw 0;
+}
+
+.notifications-list li:last-child {
+  border-bottom: none;
+}
+
+.notifications-list li a {
+  text-decoration: none;
+  color: #333;
+}
+
+#close-btn {
+  position: relative;
+  border: none;
+  background-color: transparent;
+  cursor: pointer;
+  left: -0.35vw;
+  z-index: 1;
+}
+
+#close-btn-page {
+  position: absolute;
+  left: 18.625vw;
+  width: 81.4vw;
+  height: 93vh;
+}
+
+#close-btn:focus {
+  outline: none;
+}
+
+#notification-btn {
+  background-color: transparent;
+  border: none;
+  cursor: pointer;
+}
+
+#notification-btn:hover {
+  opacity: 0.8;
+}
+
+.active {
+  background-color: #35af78 !important;
+}
+
+.listbutton {
+  position: relative;
+  height: 8.5vh;
+  width: 0.2vw;
+}
+
+
+@keyframes slidein {
+  from {
+    top: 0.5vh;
+    margin-right: 100%;
+    width: 16vw;
+    opacity: 0%;
+    font-size: 0%;
+  }
+
+  to {
+    top: 0.9vh;
+    margin-left: 0%;
+    width: 18.625vw;
+    opacity: 0vh;
+    font-size: 100%;
+  }
+}
+
+@keyframes slideout {
+  from {
+    top: 0.9vh;
+    margin-left: 0%;
+    width: 18.625vw;
+    opacity: 0vh;
+    font-size: 100%;
+
+  }
+
+  to {
+    top: 0vh;
+    margin-right: 100%;
+    width: 10vw;
+    opacity: 0%;
+    font-size: 0%;
+  }
+}
