@@ -1,7 +1,10 @@
 import React, { useState } from 'react';
-import { BrowserRouter as Router, Routes, Route } from "react-router-dom";
+import { BrowserRouter as Router, Routes, Route } from 'react-router-dom';
 import './App.css';
 import escudo from './icons/escudopoligamers.png';
+import ValorantTeam from './components/ValorantTeam/ValorantTeam';
+import LolTeam from './components/LolTeam/LolTeam';
+import { Link } from 'react-router-dom';
 
 function App() {
   const [popUpOpen, setPopUpOpen] = useState(false);
@@ -35,8 +38,8 @@ function App() {
                 <h3>Nuestros equipos</h3>
               </div>
               <ul className="notifications-list">
-                <li className="d-flex justify-content-start">Valorant</li>
-                <li>League of Legends</li>
+                <a href="/valorant"><li>Valorant</li></a>
+                <a href="/lol"><li>League of Legends</li></a>
                 <li>FIFA</li>
                 <li>Super Smash Bros Ultimate</li>
               </ul>
@@ -47,13 +50,14 @@ function App() {
           </div>
         </div>
         <div className="header-logos">
-          <img src={escudo} className="poligamers" alt="Poligamers Logo" />
+          <a href="/"><img src={escudo} className="poligamers" alt="Poligamers Logo" /></a>
         </div>
       </div>
       <Router>
         <div>
           <Routes>
-            {/* Tus rutas aquí */}
+            <Route exact path="/valorant" element={<ValorantTeam />} />
+            <Route exact path="/lol" element={<LolTeam />} />
           </Routes>
         </div>
       </Router>

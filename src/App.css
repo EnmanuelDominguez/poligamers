@@ -11,13 +11,18 @@
   transition: background-color 0.3s ease-in-out;
 }
 
+a:link, a:visited, a:active {
+  text-decoration:none;
+  color: white;
+}
+
 .header.popup-open {
   background-color: #196844;
   /* Color de fondo cuando el popup está abierto */
 }
 
 .header.popup-open img {
-  opacity: 70%;
+  opacity: 30%;
 }
 
 .header-logos {
@@ -183,6 +188,7 @@ button {
   left: 18.625vw;
   width: 81.4vw;
   height: 93vh;
+  z-index: 0;
 }
 
 #close-btn:focus {

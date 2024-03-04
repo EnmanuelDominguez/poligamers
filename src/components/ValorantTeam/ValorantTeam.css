@@ -1,0 +1,206 @@
+.playercards {
+    font-size: 3.5vh;
+    color: white;
+    text-align: center;
+    position: absolute;
+    padding: 0.5% 0% 0% 4%;
+    background-color: #222222;
+    animation-duration: 2s;
+    animation-name: fadeincards;
+}
+
+.containers {
+    display: grid;
+    grid-template-columns: repeat(5, 1fr);
+    grid-gap: 3vw;
+    grid-auto-rows: minmax(5vw, auto);
+    padding: 1% 0% 0% 0%;
+}
+
+body {
+    background-color: white;
+}
+
+.container {
+    filter: drop-shadow(0 0 0.2rem yellow);
+    border-radius: 3%;
+    grid-column: auto;
+    grid-row: 1/1;
+    width: 15.625vw;
+    height: 45vh;
+
+    position: relative;
+
+    background: url("../../assets/PlayersPictures/Valorant/Drak.JPG");
+    background-color: black;
+    background-size: cover;
+    cursor: pointer;
+
+    -webkit-box-shadow: 0 0 0.26vh #000;
+    box-shadow: 0 0 0.26vh #000;
+}
+
+.container2 {
+    filter: drop-shadow(0 0 0.2rem yellow);
+    border-radius: 3%;
+    grid-column: 2/5;
+    grid-row: 1/1;
+    width: 15.625vw;
+    height: 45vh;
+
+    position: relative;
+
+    background: url("../../assets/PlayersPictures/Valorant/Samuel.JPG");
+    background-color: black;
+    background-size: cover;
+    cursor: pointer;
+
+    -webkit-box-shadow: 0 0 0.26vh #000;
+    box-shadow: 0 0 0.26vh #000;
+}
+
+.container3 {
+    filter: drop-shadow(0 0 0.2rem yellow);
+    border-radius: 3%;
+    grid-column: 3/5;
+    grid-row: 1/1;
+    width: 15.625vw;
+    height: 45vh;
+
+    position: relative;
+
+    background: url("../../assets/PlayersPictures/Valorant/Panko.JPG");
+    background-color: black;
+    background-size: cover;
+    cursor: pointer;
+
+    -webkit-box-shadow: 0 0 0.26vh #000;
+    box-shadow: 0 0 0.26vh #000;
+}
+
+.container4 {
+    filter: drop-shadow(0 0 0.2rem yellow);
+    border-radius: 3%;
+    grid-column: 4/5;
+    grid-row: 1/1;
+    width: 15.625vw;
+    height: 45vh;
+
+    position: relative;
+
+    background: url("../../assets/PlayersPictures/Valorant/Scriptz.JPG");
+    background-color: black;
+    background-size: cover;
+    cursor: pointer;
+
+    -webkit-box-shadow: 0 0 0.26vh #000;
+    box-shadow: 0 0 0.26vh #000;
+}
+
+.container5 {
+    filter: drop-shadow(0 0 0.2rem yellow);
+    border-radius: 3%;
+    grid-column: 5/5;
+    grid-row: 1/1;
+    width: 15.625vw;
+    height: 45vh;
+
+    position: relative;
+
+    background: url("../../assets/PlayersPictures/Valorant/Psylan.JPG");
+    background-color: black;
+    background-size: cover;
+    cursor: pointer;
+
+    -webkit-box-shadow: 0 0 0.26vh #000;
+    box-shadow: 0 0 0.26vh #000;
+}
+
+.overlay {
+    width: 100%;
+    height: 100%;
+
+    display: grid;
+    grid-column: auto;
+
+    background: rgba(17, 145, 55, 0.9);
+    color: white;
+    opacity: 0;
+    transition: all 0.5s;
+
+    font-family: 'Playfair Display', serif;
+}
+
+
+.items {
+    letter-spacing: 0.156vw;
+}
+
+.head {
+    font-size: 1.563vw;
+    line-height: 40px;
+
+    transform: translateY(40px);
+    transition: all 0.7s;
+
+    hr {
+        display: block;
+        width: 0;
+
+        border: none;
+        border-bottom: solid 0.2vw white;
+
+        position: absolute;
+        bottom: 0;
+        left: 1.042vw;
+
+        transition: all .5s;
+    }
+}
+
+.data {
+    font-size: 1.146vw;
+    line-height: 0.926vh;
+    font-weight: bold;
+    opacity: 100%;
+    transform: translateY(3.704vh);
+    transition: all 0.7s;
+
+    .game {
+        color: lighten(rgb(77, 77, 77), 40%);
+    }
+}
+
+.containers .container:hover .overlay,
+.container2:hover .overlay,
+.container3:hover .overlay,
+.container4:hover .overlay,
+.container5:hover .overlay {
+    border-radius: 3%;
+    opacity: 1;
+
+    & .head {
+        transform: translateY(0px);
+    }
+
+    & hr {
+        width: 3.906vw;
+        transition-delay: 0.4s;
+    }
+
+    & .data {
+        transform: translateY(0px);
+        transition-delay: 0.3s;
+        opacity: 1;
+    }
+}
+
+@keyframes fadeincards {
+    from {
+        opacity: 0%;
+    }
+
+    to {
+        opacity: 100%;
+    }
+}
