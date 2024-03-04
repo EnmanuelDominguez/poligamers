@@ -38,8 +38,8 @@ function App() {
                 <h3>Nuestros equipos</h3>
               </div>
               <ul className="notifications-list">
-                <a href="poligamers/valorant"><li>Valorant</li></a>
-                <a href="poligamers/lol"><li>League of Legends</li></a>
+                <a href="/valorant"><li>Valorant</li></a>
+                <a href="/lol"><li>League of Legends</li></a>
                 <li>FIFA</li>
                 <li>Super Smash Bros Ultimate</li>
               </ul>
@@ -56,8 +56,8 @@ function App() {
       <Router>
         <div>
           <Routes>
-            <Route exact path="poligamers/valorant" element={<ValorantTeam />} />
-            <Route exact path="poligamers/lol" element={<LolTeam />} />
+            <Route exact path="/valorant" element={<ValorantTeam />} />
+            <Route exact path="/lol" element={<LolTeam />} />
           </Routes>
         </div>
       </Router>
